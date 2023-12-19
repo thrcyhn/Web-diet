@@ -6,9 +6,73 @@
 
     <script src="https://kit.fontawesome.com/154420ae7f.js" crossorigin="anonymous"></script>
 
+    <script>
+        // Sayfa yüklendiğinde yapılacak işlemler
+        document.addEventListener("DOMContentLoaded", function () {
+            // Menü butonlarına tıklama olayları
+            document.getElementById("anasayfaBtn").addEventListener("click", function () {
+                // Anasayfa ile ilgili işlemler veya yönlendirme
+                console.log("Anasayfa butonuna tıklandı.");
+            });
+
+            document.getElementById("hakkimizdaBtn").addEventListener("click", function () {
+                // Hakkımda ile ilgili işlemler veya yönlendirme
+                console.log("Hakkımda butonuna tıklandı.");
+            });
+
+            document.getElementById("basaranlarBtn").addEventListener("click", function () {
+                // Başarılar ile ilgili işlemler veya yönlendirme
+                console.log("Başaranlar butonuna tıklandı.");
+            });
+
+            document.getElementById("iletisimBtn").addEventListener("click", function () {
+                // İletişim ile ilgili işlemler veya yönlendirme
+                console.log("İletişim butonuna tıklandı.");
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var anasayfaBtn = document.getElementById("anasayfaBtn");
+            var hakkimizdaBtn = document.getElementById("hakkımdaBtn");
+            var basaranlarBtn = document.getElementById("basarilarBtn");
+            var iletisimBtn = document.getElementById("iletisimBtn");
+
+            function scrollToSection(event, sectionId) {
+                event.preventDefault();
+                var section = document.getElementById(sectionId);
+                section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            function scrollToSection(event, sectionId) {
+                event.preventDefault();
+                var section = document.getElementById(sectionId);
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            anasayfaBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "anasayfa");
+            });
+
+            hakkimizdaBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "hakkimizda");
+            });
+
+            basaranlarBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "basaranlar");
+            });
+
+            iletisimBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "iletisim");
+            });
+        });
+    </script>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 
     <title>Dyt. Bilge Aydın</title>
@@ -19,10 +83,10 @@
     <section id="menu">
         <div id="logo">Bilge Aydın</div>
         <nav>
-            <a href=""><i class="fa-solid fa-house ikon "></i>Anasayfa</a>
-            <a href=""><i class="fa-solid fa-info ikon "></i>Hakkımda</a>
-            <a href=""><i class="fa-regular fa-thumbs-up ikon "></i>Başarılar</a>
-            <a href=""><i class="fa-regular fa-paper-plane ikon "></i>İletişim</a>
+            <a href="" id="anasayfaBtn"><i class="fa-solid fa-house ikon "></i>Anasayfa</a>
+            <a href="" id="hakkımdaBtn"><i class="fa-solid fa-info ikon "></i>Hakkımda</a>
+            <a href="" id="basarilarBtn"><i class="fa-regular fa-thumbs-up ikon "></i>Başarılar</a>
+            <a href="" id="iletisimBtn"><i class="fa-regular fa-paper-plane ikon "></i>İletişim</a>
         </nav>
     </section>
 
@@ -121,18 +185,47 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum adipisci praesentium, consequatur voluptatum rerum soluta ipsam debitis, illo mollitia odit inventore et nostrum numquam.</p>
             </div>
         </div>
-    
-        
-    
-    </section>
     <section id="iletisim">
-        <h3 class="baslik">İletişim</h3>
-        <p>Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p>
-        <address>
-            <p>Email: info@example.com</p>
-            <p>Telefon: +123 456 7890</p>
-            <p>Adres: Örnek Cad. No: 123, Şehir</p>
-        </address>
+        <div id="container">
+            <h3>İletişim</h3>
+            <p>TÜM SOULARINIZ İÇİN BİZE BU ADRESLERDEN ULAŞABİLİRSİNİZ!</p>
+        
+            <div id="contact-links">
+                <a href="mailto:dyt.bilgeaydin@gmail.com" class="ulas" target="_blank"><i class="fa-regular fa-envelope"></i>Mail</a>
+                <a href="https://web.whatsapp.com/" class="ulas" target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+                <a href="https://www.instagram.com/" class="ulas" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                <a href="https://www.google.com.tr/maps/dir//Yahyal%C4%B1,+Kayseri/@40.972701,29.1492603,17z/data=!4m5!4m4!1m0!1m2!1m1!1s0x152bd0d247874ddd:0xf16ed0617ebd6bec?hl=tr&entry=ttu" class="ulas" target="_blank"><i class="fa-solid fa-location-dot"></i>Harita</a>
+            </div>
+
+            <p class="form-metin">YADA FORMU DOLDURUN BİZ SİZE ULAŞALIM!</p>
+        
+            <form id="contact-form" action="index.php" method="post">
+                
+                <label for="name">Ad Soyad:</label>
+                <input type="text" id="name" name="isim" required>
+        
+                <label for="email">E-Posta Adresi:</label>
+                <input type="email" id="email" name="mail" required>
+        
+                <label for="subject">Konu:</label>
+                <input type="text" id="subject" name="konu" required>
+        
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="icerik" rows="4" required></textarea>
+        
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </section>       
+
+    
+    <section class="footer">
+        <div>
+
+            <p>2023 | Tüm Hakları Saklıdır.</p>
+            <p>Tahir Ceyhan tarafından kodlanmıştır.</p>
+
+        </div>
     </section>
 
 
