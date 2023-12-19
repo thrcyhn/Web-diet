@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=0">
+
+    <script src="https://kit.fontawesome.com/154420ae7f.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Sayfa yüklendiğinde yapılacak işlemler
+        document.addEventListener("DOMContentLoaded", function () {
+            // Menü butonlarına tıklama olayları
+            document.getElementById("anasayfaBtn").addEventListener("click", function () {
+                // Anasayfa ile ilgili işlemler veya yönlendirme
+                console.log("Anasayfa butonuna tıklandı.");
+            });
+
+            document.getElementById("hakkimizdaBtn").addEventListener("click", function () {
+                // Hakkımda ile ilgili işlemler veya yönlendirme
+                console.log("Hakkımda butonuna tıklandı.");
+            });
+
+            document.getElementById("basaranlarBtn").addEventListener("click", function () {
+                // Başarılar ile ilgili işlemler veya yönlendirme
+                console.log("Başaranlar butonuna tıklandı.");
+            });
+
+            document.getElementById("iletisimBtn").addEventListener("click", function () {
+                // İletişim ile ilgili işlemler veya yönlendirme
+                console.log("İletişim butonuna tıklandı.");
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var anasayfaBtn = document.getElementById("anasayfaBtn");
+            var hakkimizdaBtn = document.getElementById("hakkımdaBtn");
+            var basaranlarBtn = document.getElementById("basarilarBtn");
+            var iletisimBtn = document.getElementById("iletisimBtn");
+
+            function scrollToSection(event, sectionId) {
+                event.preventDefault();
+                var section = document.getElementById(sectionId);
+                section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            function scrollToSection(event, sectionId) {
+                event.preventDefault();
+                var section = document.getElementById(sectionId);
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            anasayfaBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "anasayfa");
+            });
+
+            hakkimizdaBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "hakkimizda");
+            });
+
+            basaranlarBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "basaranlar");
+            });
+
+            iletisimBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "iletisim");
+            });
+        });
+    </script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
+    <title>Dyt. Bilge Aydın</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section id="menu">
+        <div id="logo">Bilge Aydın</div>
+        <nav>
+            <a href="" id="anasayfaBtn"><i class="fa-solid fa-house ikon "></i>Anasayfa</a>
+            <a href="" id="hakkımdaBtn"><i class="fa-solid fa-info ikon "></i>Hakkımda</a>
+            <a href="" id="basarilarBtn"><i class="fa-regular fa-thumbs-up ikon "></i>Başarılar</a>
+            <a href="" id="iletisimBtn"><i class="fa-regular fa-paper-plane ikon "></i>İletişim</a>
+        </nav>
+    </section>
+
+    <section id="anasayfa">
+        <div id="black">
+
+        </div>
+        <div id="icerik">
+            <h2>Dyt. Bilge Aydın</h2>
+            <hr width="300" align="left">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, ab corporis commodi repudiandae, molestias nisi cumque error mollitia amet ut at animi! Quas beatae cumque itaque consequatur! Iure, impedit minus!
+            </p>
+        </div>
+    </section>
+
+    <section id="hakkimizda">
+
+        <h3>Hakkımda</h3>
+        <div class="containerx">
+            <div id="sol">
+                <h5 id="h5sol">
+                    Lorem ipsum dolor s nemo quo omnis
+                </h5>
+            </div>
+        
+            <div id="sag">
+                <span>X</span>
+                <p id=" psag"></p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi assumenda doloribus voluptatum corrupti non officia nulla, numquam quaerat quisquam earum consequatur nesciunt sint sit adipisci et, id, cumque exercitationem maiores.</p>
+            </div>
+        
+
+        <img src="Images/hakkimizda.jpg" alt="" class="img-fluid mt100">
+        <p id="pson">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum dolorem cumque repudiandae aliquam inventore aut praesentium odit. Ad nisi molestiae impedit! Quasi labore aliquid debitis eos voluptatum, sunt eligendi autem.</p>
+
+        </div>
+    </section>
+
+    <section id="hizmetler">
+        <h3>Hizmetler</h3>
+        <div class="tümhizmetler">
+            <div class="hizmetler">
+                <h4 class="hizmet-baslik">HAFTALIK DİYET</h4>
+                <img src="Images/haftalik.jpg" alt="" class="ürünfoto">
+                <p class="hizmet-aciklama">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, assumenda!</p>
+                <p class="hizmet-fiyat">Fiyat: $100</p>
+                <button class="bilgi-al-btn">Bilgi Al</button>
+            </div>
+    
+            <div class="hizmetler">
+                <h4 class="hizmet-baslik">AYLIK DİYET</h4>
+                <img src="Images/haftalik.jpg" alt="" class="ürünfoto">
+                <p class="hizmet-aciklama">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, dicta.</p>
+                <p class="hizmet-fiyat">Fiyat: $150</p>
+                <button class="bilgi-al-btn">Bilgi Al</button>
+            </div>
+    
+            <div class="hizmetler">
+                <h4 class="hizmet-baslik">ÜÇ AYLIK DİYET</h4>
+                <img src="Images/haftalik.jpg" alt="" class="ürünfoto">
+                <p class="hizmet-aciklama">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, qui.</p>
+                <p class="hizmet-fiyat">Fiyat: $120</p>
+                <button class="bilgi-al-btn">Bilgi Al</button>
+            </div>
+    
+            <div class="hizmetler">
+                <h4 class="hizmet-baslik"> ALTI AYLIK DİYET</h4>
+                <img src="Images/haftalik.jpg" alt="" class="ürünfoto">
+                <p class="hizmet-aciklama">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dolore!</p>
+                <p class="hizmet-fiyat">Fiyat: $200</p>
+                <button class="bilgi-al-btn">Bilgi Al</button>
+            </div>
+        </div>
+    </section>
+    <section id="basaranlar">
+        <h3>Başaranlar</h3>
+        <div class="kart">
+            <img src="Images/WhatsApp Image 2023-12-16 at 00.13.44.jpeg" alt="Başaran Fotoğraf">
+            <div class="aciklama">
+                <h4>Emre Karkın</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nisi eos ipsam? Voluptas nulla quae reprehenderit, velit adipisci quo soluta incidunt labore nesciunt sequi consequuntur.</p>
+            </div>
+        </div>
+
+        <div class="kart">
+            <img src="Images/WhatsApp Image 2023-12-16 at 00.13.40.jpeg" alt="Başaran Fotoğraf">
+            <div class="aciklama">
+                <h4>Veysel Orhan</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, voluptate est impedit amet reprehenderit molestiae iste id doloremque eveniet optio dolorem officiis recusandae? Voluptatum, mollitia.</p>
+            </div>
+        </div>
+
+        <div class="kart">
+            <img src="Images/bilge.jpg" alt="Başaran Fotoğraf">
+            <div class="aciklama">
+                <h4>Bilge Aydın</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim laborum adipisci praesentium, consequatur voluptatum rerum soluta ipsam debitis, illo mollitia odit inventore et nostrum numquam.</p>
+            </div>
+        </div>
+    <section id="iletisim">
+        <div id="container">
+            <h3>İletişim</h3>
+            <p>TÜM SOULARINIZ İÇİN BİZE BU ADRESLERDEN ULAŞABİLİRSİNİZ!</p>
+        
+            <div id="contact-links">
+                <a href="mailto:dyt.bilgeaydin@gmail.com" class="ulas" target="_blank"><i class="fa-regular fa-envelope"></i>Mail</a>
+                <a href="https://web.whatsapp.com/" class="ulas" target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
+                <a href="https://www.instagram.com/" class="ulas" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                <a href="https://www.google.com.tr/maps/dir//Yahyal%C4%B1,+Kayseri/@40.972701,29.1492603,17z/data=!4m5!4m4!1m0!1m2!1m1!1s0x152bd0d247874ddd:0xf16ed0617ebd6bec?hl=tr&entry=ttu" class="ulas" target="_blank"><i class="fa-solid fa-location-dot"></i>Harita</a>
+            </div>
+
+            <p class="form-metin">YADA FORMU DOLDURUN BİZ SİZE ULAŞALIM!</p>
+        
+            <form id="contact-form" action="index.php" method="post">
+                
+                <label for="name">Ad Soyad:</label>
+                <input type="text" id="name" name="isim" required>
+        
+                <label for="email">E-Posta Adresi:</label>
+                <input type="email" id="email" name="mail" required>
+        
+                <label for="subject">Konu:</label>
+                <input type="text" id="subject" name="konu" required>
+        
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="icerik" rows="4" required></textarea>
+        
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </section>       
+
+    
+    <section class="footer">
+        <div>
+
+            <p>2023 | Tüm Hakları Saklıdır.</p>
+            <p>Tahir Ceyhan tarafından kodlanmıştır.</p>
+
+        </div>
+    </section>
+
+
+</body>
+</html>
+
+<?php
+
+include("baglanti.php");
+
+if(isset($_POST["isim"], $_POST["mail"], $_POST["konu"], $_POST["icerik"])){
+
+    $adsoyad=$_POST["isim"];
+    $mail=$_POST["mail"];
+    $konu=$_POST["konu"];
+    $icerik=$_POST["icerik"];
+
+    $ekle="INSERT INTO `iletisim`(adsoyad, mail, konu, icerik) VALUES ('".$adsoyad."','".$mail."','".$konu."','".$icerik."')";
+    
+if ($baglan->query($ekle) === TRUE) {
+    echo "<script> alert('Mesajınız bize ulaşmıştır size dönüş yapacağız!') </script>";
+} 
+
+else {
+    echo "<script> alert('Mesajını alamadık en kısa sürede sorunu düzelteceğiz.') </script>";
+}
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>İletişim Tablosu</h1>
+
+<table id="customers">
+  <tr>
+    <th>Ad_Soyad</th>
+    <th>Mail</th>
+    <th>Konu</th>
+    <th>İçerik</th>
+  </tr>
+
+  
+
+<?php
+session_start();
+
+if ($_SESSION['user'] == "") {
+    echo "<script>window.location.href='cikis.php'</script>";
+} else {
+
+    echo "Kullanıcı adınız : ".$_SESSION['user']."<br>";
+    echo "<a href='cikis.php'> ÇIKIŞ YAP </a><br><br><br>";
+    include("baglanti.php");
+    $sec = "Select * from iletisim";
+    $sonuc = $baglan->query($sec);
+
+    if ($sonuc->num_rows > 0) {
+        while ($cek = $sonuc->fetch_assoc()) {
+            echo "
+            <tr>
+                <td>" . $cek['adsoyad'] . "</td>
+                <td>" . $cek['mail'] . "</td>
+                <td>" . $cek['konu'] . "</td>
+                <td>" . $cek['icerik'] . "</td>
+            </tr>
+            ";
+        }
+    } else {
+        echo "Veritabanında kayıtlı hiçbir veri bulunamadı";
+    }
+}
+?>
+</table>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<form action="panelgiris.php" method="post" style="max-width:500px;margin:auto">
+  <h2>Giriş Paneli</h2>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Kullanıcı adı" name="usrnm">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Parola" name="psw">
+  </div>
+
+  <button type="submit" class="btn">Giriş Yap</button>
+</form>
+
+</body>
+</html>
+
+<?php
+
+session_start();
+
+if(isset($_POST["usrnm"], $_POST["psw"])){
+
+  if($_POST["usrnm"]=="admin" && $_POST["psw"]==="383838"){
+
+    $_SESSION["user"]=$_POST["usrnm"];
+    header("location:panel.php");
+}
+  else{
+
+    echo "<script>alert('Kullanıcı adı veya şifre hatalı')</script>";
+  }
+
+}
+
+?>
+
+<?php
+
+$vt_sunucu = "localhost";
+$vt_kullanici = "root";
+$vt_sifre = "";
+$vt_adi = "iletisim_tablosu";
+
+$baglan = mysqli_connect($vt_sunucu, $vt_kullanici, $vt_sifre, $vt_adi);
+
+if (!$baglan) {
+    die("Veritabanı bağlantı işlemi başarısız" . mysqli_connect_error());
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<form action="panelgiris.php" method="post" style="max-width:500px;margin:auto">
+  <h2>Giriş Paneli</h2>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="Kullanıcı adı" name="usrnm">
+  </div>
+  
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Parola" name="psw">
+  </div>
+
+  <button type="submit" class="btn">Giriş Yap</button>
+</form>
+
+</body>
+</html>
+
+<?php
+
+session_start();
+
+if(isset($_POST["usrnm"], $_POST["psw"])){
+
+  if($_POST["usrnm"]=="admin" && $_POST["psw"]==="383838"){
+
+    $_SESSION["user"]=$_POST["usrnm"];
+    header("location:panel.php");
+}
+  else{
+
+    echo "<script>alert('Kullanıcı adı veya şifre hatalı')</script>";
+  }
+
+}
+
+?>
