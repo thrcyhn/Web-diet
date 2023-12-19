@@ -8,7 +8,7 @@ body{
 
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    color: #555;
+    background-color: #f8f9fa;
     
 
 }
@@ -81,17 +81,19 @@ nav a:visited{
     font-size: 20px;
 }
 
-#hakkimizda{
-    background-color: f8f9fa;
+#hakkimizda {
+    background-color: #f8f9fa;
     padding: 50px;
     text-align: center;
     text-transform: capitalize;
     font-weight: 600;
+    margin-bottom: 20px; 
+
 }
 
 h3{
 
-    font-size: 55px;
+    font-size: 45px;
     color:#003666;
     text-shadow: 0px 1px 1px black;
     font-weight: 600;
@@ -144,12 +146,12 @@ span{
 }
 
 #imgfluid{
-    max-width: 100%;
+    max-width: 1000%;
     height: auto;
 }
 
 .mt100{
-    margin-top:100px;
+    margin-top:60px;
 }
 
 #pson{
@@ -234,11 +236,11 @@ span{
 .bilgi-al-btn {
     background-color: #003666;
     color: white;
-    padding: 8px 8px; /* Buton boyutları burada ayarlanıyor */
+    padding: 8px 8px; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Buton metin boyutu */
+    font-size: 14px; 
     transition: background-color 0.3s ease;
 }
 
@@ -246,13 +248,14 @@ span{
     background-color: #002445;
 }
 
-/* Başaranlar bölümü için stillendirmeler */
+
 #basaranlar {
     background-color: #f8f9fa;
     padding: 50px;
     text-align: center;
     text-transform: capitalize;
     font-weight: 600;
+    margin-top: 100px; 
 }
 
 #basaranlar h3 {
@@ -273,7 +276,7 @@ span{
 .kart img {
     width: 120px;
     height: 120px;
-    border-radius: 10px; /* Kenarları yumuşatmak için */
+    border-radius: 10px; 
     margin-right: 20px;
 }
 
@@ -281,12 +284,12 @@ span{
     flex: 1;
 }
 
-/* Diğer stillendirmeler */
+
 .kart h4 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #003666; /* İstediğiniz renk için ayarlayabilirsiniz */
+    color: #003666; 
 }
 
 .kart p {
@@ -302,6 +305,111 @@ h3.baslik {
     margin-bottom: 20px;
     text-align: center;
 }
- .iletisim{
-    
- }
+
+#iletisim {
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h3 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+#contact-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ulas {
+    margin: 0 10px;
+    font-size: 18px;
+    color: #003666;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.ulas:hover {
+    border-bottom: 2px solid #003666;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid #003666;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+input,
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #003666;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #003666;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #001d33;
+}
+
+.info-message {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+#iletisim p {
+    margin-bottom: 20px;
+}
+
+#contact-links {
+    margin-bottom: 60px;
+}
+
+.form-metin {
+    margin-top: 30px;
+}
+
+#contact-links a {
+    margin-right: 10px; /* Sağa 10 piksel boşluk */
+    display: inline-block;
+}
+
+#contact-links i {
+    margin-right: 5px; /* Sağa 5 piksel boşluk */
+}
+
+#hakkimizda h3,
+#hizmetler h3 {
+    color: #003666; /* Başlık rengini değiştirebilirsiniz */
+}
