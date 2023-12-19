@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/hello": {
+      "runtime": "vercel-node@0.10.3"
+    }
+  }
+}
