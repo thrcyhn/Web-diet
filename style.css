@@ -413,3 +413,9 @@ button:hover {
 #hizmetler h3 {
     color: #003666; /* Başlık rengini değiştirebilirsiniz */
 }
+
+/* Genel stil kuralları */
+
+@media only screen and (max-width: 600px) {
+  /* 600 piksel ve altındaki ekranlar için stil kuralları */
+}
