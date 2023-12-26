@@ -8,35 +8,51 @@
     <script src="https://kit.fontawesome.com/154420ae7f.js" crossorigin="anonymous"></script>
 
     <script>
-        // Sayfa yüklendiğinde yapılacak işlemler
-        document.addEventListener("DOMContentLoaded", function () {
-            // Menü butonlarına tıklama olayları
-            document.getElementById("anasayfaBtn").addEventListener("click", function () {
-                // Anasayfa ile ilgili işlemler veya yönlendirme
-                console.log("Anasayfa butonuna tıklandı.");
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var anasayfaBtn = document.getElementById("anasayfaBtn");
+            var hakkimizdaBtn = document.getElementById("hakkımdaBtn");
+            var hizmetlerBtn = document.getElementById("hizmetlerBtn");
+            var basaranlarBtn = document.getElementById("basarilarBtn");
+            var iletisimBtn = document.getElementById("iletisimBtn");
+
+            function scrollToSection(event, sectionId) {
+                event.preventDefault();
+                var section = document.getElementById(sectionId);
+                var yOffset = -document.getElementById("menu").offsetHeight; // Adjust for fixed menu height
+                var y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+
+            anasayfaBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "anasayfa");
             });
 
-            document.getElementById("hakkimizdaBtn").addEventListener("click", function () {
-                // Hakkımda ile ilgili işlemler veya yönlendirme
-                console.log("Hakkımda butonuna tıklandı.");
+            hakkimizdaBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "hakkimizda");
             });
 
-            document.getElementById("basaranlarBtn").addEventListener("click", function () {
-                // Başarılar ile ilgili işlemler veya yönlendirme
-                console.log("Başaranlar butonuna tıklandı.");
+            hizmetlerBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "hizmetler");
             });
 
-            document.getElementById("iletisimBtn").addEventListener("click", function () {
-                // İletişim ile ilgili işlemler veya yönlendirme
-                console.log("İletişim butonuna tıklandı.");
+            basaranlarBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "basaranlar");
             });
-        });
+
+            iletisimBtn.addEventListener("click", function(event) {
+                scrollToSection(event, "iletisim");
+            });
+});
+
+
     </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var anasayfaBtn = document.getElementById("anasayfaBtn");
             var hakkimizdaBtn = document.getElementById("hakkımdaBtn");
+            var hizmetlerBtn = document.getElementById("hizmetlerBtn")
             var basaranlarBtn = document.getElementById("basarilarBtn");
             var iletisimBtn = document.getElementById("iletisimBtn");
 
