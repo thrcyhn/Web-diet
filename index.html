@@ -52,7 +52,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             var anasayfaBtn = document.getElementById("anasayfaBtn");
             var hakkimizdaBtn = document.getElementById("hakkımdaBtn");
-            var hizmetlerBtn = document.getElementById("hizmetlerBtn")
+            var hizmetlerBtn = document.getElementById("hizmetlerBtn");
             var basaranlarBtn = document.getElementById("basarilarBtn");
             var iletisimBtn = document.getElementById("iletisimBtn");
 
@@ -231,7 +231,7 @@
                 <label for="message">Mesajınız:</label>
                 <textarea id="message" name="icerik" rows="4" required></textarea>
         
-                <button type="submit">Gönder</button>
+                <button type="submit" name="gönder">Gönder</button>
             </form>
         </div>
     </section>       
@@ -249,3 +249,26 @@
 
 </body>
 </html>
+
+<?php
+
+
+include('baglanti.php');
+
+if(isset($_POST["gönder"])){
+    $isim = $_POST['isim'];
+    $mail = $_POST['mail'];
+    $konu = $_POST['konu'];
+    $icerik = $_POST['icerik'];
+
+    $ekle = "INSERT INTO `iletisim`(`adsoyad`, `mail`, `konu`, `icerik`) VALUES ('".$isim."','".$mail."','".$konu."','".$icerik."')";
+    
+    if($baglan -> query($ekle)===TRUE)
+    {
+
+        echo "<script>alert('MESAJINI ALDIK SANA EN KISA SÜREDE DÖNECEĞİZ!')</script>";
+    }
+}
+
+?>
+
